@@ -12,7 +12,9 @@ export function Piegraphsumblock() {
   return (
     <>
       <div className="dashgraphbarcont">
-        <h2 className="dashgraph__header">Distribution of CO2e</h2>
+        <h2 className="dashgraph__header">
+          Distribution of CO<sub>2</sub>e
+        </h2>
         <div className="dashgraphbar__cont">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart height={250}>

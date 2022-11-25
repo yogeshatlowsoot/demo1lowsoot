@@ -37,7 +37,7 @@ export function Databoard() {
                   <span className="databoardupoption_btntxt">connect</span>
                   <img
                     className="databoardupoption_btnlogo"
-                    src="https://images.ctfassets.net/k49d63tr8kcn/5bCNO2Pj0vuoV0cifCYniN/1c85fd1fa4101a7908d1bb78820330e2/google-sheets-logo-color.svg"
+                    src="https://www.gstatic.com/images/branding/product/2x/hh_sheets_64dp.png"
                     alt="Google_Sheets"
                   />
                 </button>

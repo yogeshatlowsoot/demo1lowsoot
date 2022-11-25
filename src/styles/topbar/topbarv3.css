@@ -19,6 +19,17 @@
   padding: 0 8rem;
   background-color: white;
 }
+.topbarv3__imglogocont {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topbarv3__imglogo {
+  width: 100%;
+  transform: scale(1.5);
+}
 .topbarv3__companytext {
   font-weight: 400;
   font-size: 1.6rem;
@@ -29,6 +40,7 @@
 .topbarv3__companycont {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 .topbarv3__imgcont {
   height: 100%;

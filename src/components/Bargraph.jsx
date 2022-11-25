@@ -1,13 +1,14 @@
-import {
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  BarChart,
-  Bar,
-  ResponsiveContainer,
-  CartesianGrid,
-} from "recharts";
+import ReactApexChart from "react-apexcharts";
+// import {
+//   XAxis,
+//   YAxis,
+//   Tooltip,
+//   Legend,
+//   BarChart,
+//   Bar,
+//   ResponsiveContainer,
+//   CartesianGrid,
+// } from "recharts";
 import { useVisuals } from "../contexts/Visualcontext";
 import { getmonthno } from "../functions/setmonthnum";
 // import { chart2data } from "../mockdata";
@@ -22,34 +23,48 @@ export function Bargraph(params) {
   const ju = vizx.findIndex((elem) => elem.monthno === monthno);
   const juend = Number(enddateval.slice(5, 7));
   const jju = [...vizx].slice(ju, juend);
-  // useEffect(() => {
-  //   const controller = new AbortController();
-  //   const signal = controller.signal;
-  //   setLoader(true);
-  //   (async () => {
-  //     try {
-  //       const response = await axios.get("/api/chart2data", { signal });
-  //       if (response.status === 200) {
-  //         setData(response.data.carbodata);
-  //       }
-  //       setLoader(false);
-  //     } catch (error) {
-  //       if (axios.isAxiosError(error)) {
-  //       } else {
-  //       }
-  //     } finally {
-  //       setLoader(false);
-  //     }
-  //   })();
-
-  //   return () => {
-  //     controller.abort();
-  //   };
-  // }, []);
+  const monthlist = [...jju].map((item) => item.month);
+  const datalistval = [...jju].map((item) => Math.round(item.emission));
+  const apexchartv = {
+    series: [
+      {
+        name: "Emissions",
+        type: "column",
+        data: datalistval,
+      },
+    ],
+    options: {
+      chart: {
+        stacked: false,
+        zoom: {
+          enabled: !false,
+        },
+        toolbar: {
+          show: false,
+        },
+      },
+      stroke: {
+        curve: "smooth",
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "75%",
+        },
+      },
+      colors: [fillvalue, "#00E396", "#FF4560", "#FEB019", "#775DD0"],
+      fill: {
+        colors: [fillvalue, "#00E396", "#FF4560", "#FEB019", "#775DD0"],
+      },
+      labels: [...monthlist],
+      markers: {
+        size: 0,
+      },
+    },
+  };
 
   return (
     <>
-      <ResponsiveContainer width="100%" height="100%">
+      {/* <ResponsiveContainer width="100%" height="100%">
         <BarChart width={500} height={300} data={jju}>
           <XAxis
             dataKey="month"
@@ -75,7 +90,12 @@ export function Bargraph(params) {
           <XAxis dataKey="day" />
           <Bar dataKey="emission" stackId="a" fill={fillvalue} barSize={20} />
         </BarChart>
-      </ResponsiveContainer>
+      </ResponsiveContainer> */}
+      <ReactApexChart
+        options={apexchartv.options}
+        series={apexchartv.series}
+        type="line"
+      />
     </>
   );
 }

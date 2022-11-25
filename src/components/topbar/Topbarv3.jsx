@@ -2,6 +2,7 @@
 // import usericon from "../../assets/user 1.svg";
 // import notificon from "../../assets/notifications 1.svg";
 import topbarbell from "../../assets/topbar/topbar_bell.svg";
+import lowesg from "../../assets/headers/esg_logo.png";
 import topbaraccount from "../../assets/topbar/topbar_account.svg";
 import topbarlogout from "../../assets/topbar/topbar_logout.svg";
 // import power from "../../assets/shutdown.svg";
@@ -22,6 +23,9 @@ export function Topbarv3() {
   return (
     <div className="topbarv3">
       <div className="topbarv3__companycont">
+        <div className="topbarv3__imglogocont">
+          <img className="topbarv3__imglogo" src={lowesg} alt="Lowsoot" />
+        </div>
         <p className="topbarv3__companytext">Lowsoot Climate Analytics</p>
       </div>
       <div className="topbarv3__logos">

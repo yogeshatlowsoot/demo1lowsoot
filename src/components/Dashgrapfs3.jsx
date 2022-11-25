@@ -17,19 +17,25 @@ export function Dashgrapfs3() {
         </div>
       </div>
       <div className="dashgraphbarcont">
-        <h2 className="dashgraph__header">Fuel in CO2e (Scope 3)</h2>
+        <h2 className="dashgraph__header">
+          Fuel in CO<sub>2</sub>e (Scope 3)
+        </h2>
         <div className="dashgraphbar__cont">
           <Bargraph vizarray={chartarray} colorvalue={color3} />
         </div>
       </div>
       <div className="dashgraphlinecont">
-        <h2 className="dashgraph__header">Fuel in CO2e (Scope 3)</h2>
+        <h2 className="dashgraph__header">
+          Fuel in CO<sub>2</sub>e (Scope 3)
+        </h2>
         <div className="dashgraphline__cont">
           <Piegraph per1={8} name1="Fuel (S3)" />
         </div>
       </div>
       <div className="dashgraphlinecont">
-        <h2 className="dashgraph__header">Fuel in CO2e</h2>
+        <h2 className="dashgraph__header">
+          Fuel in CO<sub>2</sub>e
+        </h2>
         <div className="dashgraphline__cont">
           <Areagraph vizarray={chartarray} colorvalue={color3} />
         </div>

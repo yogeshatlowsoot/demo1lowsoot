@@ -74,3 +74,6 @@
   display: flex;
   gap: 2.8rem;
 }
+.datefilters__head {
+  margin-bottom: 2.4rem;
+}

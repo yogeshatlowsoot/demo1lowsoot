@@ -17,13 +17,17 @@ export function Dashgraphdel() {
         </div>
       </div>
       <div className="dashgraphbarcont">
-        <h2 className="dashgraph__header">Delivery in CO2e</h2>
+        <h2 className="dashgraph__header">
+          Delivery in CO<sub>2</sub>e
+        </h2>
         <div className="dashgraphbar__cont">
           <Bargraph vizarray={chartarray} colorvalue={color1} />
         </div>
       </div>
       <div className="dashgraphlinecont">
-        <h2 className="dashgraph__header">Delivery in CO2e</h2>
+        <h2 className="dashgraph__header">
+          Delivery in CO<sub>2</sub>e
+        </h2>
         <div className="dashgraphline__cont">
           <Piegraph per1={10} name1="Delivery" />
         </div>
