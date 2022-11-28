@@ -15,12 +15,12 @@ import TextField from "@mui/material/TextField";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
-import { createMuiTheme, CssBaseline } from "@mui/material";
+import { createTheme, CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 
 export function Hompage() {
   const { dateval, setDateval, enddateval, setEnddateval } = useVisuals();
-  const theme = createMuiTheme({
+  const theme = createTheme({
     typography: {
       htmlFontSize: 10,
     },
