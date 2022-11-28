@@ -41,10 +41,10 @@ export function Dashboard() {
             {name === "refrigeration" && <Dashgraphref />}
             {name === "delivery" && <Dashgraphdel />}
           </div>
-          <div className="dashgraphblock">
+          {/* <div className="dashgraphblock">
             <Dashgrapharea />
             <Dashwebplatforms />
-          </div>
+          </div> */}
         </div>
         <Lowsootfooter />
       </div>
